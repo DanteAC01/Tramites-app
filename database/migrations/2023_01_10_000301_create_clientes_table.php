@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('dniRuc')->unique();
             $table->string('telefono');
             $table->string('e-mail')->unique();
-            $table->foreign('oficina_id')->references('id')->on('oficinas');
             $table->timestamps();
         });
     }

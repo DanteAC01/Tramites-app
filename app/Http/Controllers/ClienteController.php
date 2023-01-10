@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use Illuminate\Http\Request;
+use App\Models\Documento;
+use App\Models\Movimiento;
 
 class ClienteController extends Controller
 {
@@ -14,6 +17,7 @@ class ClienteController extends Controller
     public function index()
     {
         //
+        return view('documentos.clientes.index');
     }
 
     /**
@@ -21,9 +25,11 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $clientes = Cliente::all();
+        return view('documentos.clientes.create');
     }
 
     /**
@@ -35,7 +41,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         //
-        return view();
+        
     }
 
     /**

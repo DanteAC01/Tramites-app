@@ -318,7 +318,7 @@ return [
             'submenu'=> [
                 [
                     'text' => 'Clientes',
-                    'url' => '#',
+                    'route' => 'documentos.clientes.index',
                 ],
                 [
                     'text' => 'Documentos existentes',
