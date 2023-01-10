@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tdocumento extends Model
 {
     use HasFactory;
+    public function documento(){
+        return $this->hasMany(Documento::class);
+    }
 }
