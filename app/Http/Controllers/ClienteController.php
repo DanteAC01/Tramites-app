@@ -6,6 +6,7 @@ use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Models\Documento;
 use App\Models\Movimiento;
+use Illuminate\Support\Facades\Redirect;
 
 class ClienteController extends Controller
 {
@@ -41,6 +42,14 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         //
+        $cliente = new Cliente();
+        $cliente ->cliente= $request->idcliente;
+        $cliente ->nombre = $request ->nombre;
+        $cliente ->dniRuc = $request ->dniRuc;
+        $cliente ->telefono = $request ->telefono;
+        $cliente ->email = $request ->email;
+        $cliente->save();
+        return Redirect::route('documentos.clientes.index');
         
     }
 

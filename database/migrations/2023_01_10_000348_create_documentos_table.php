@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('documentos', function (Blueprint $table) {
             $table->id();
-            $table->foreign('cliente')->references('nombre')->on('clientes');
-            $table->foreign('tipo')->references('nombre')->on('tdocumentos');
             $table->string('asunto');
             $table->string('estado');
             $table->string('folio');

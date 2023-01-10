@@ -18,8 +18,6 @@ return new class extends Migration
             $table->id();
             $table->date('fecha');
             $table->time('hora');
-            $table->foreign('Oficina_id')->references('id')->on('Oficinas');
-            $table->foreign('Oficina_id')->references('id')->on('Oficinas');
             $table->timestamps();
         });
     }

@@ -10,8 +10,15 @@
    <h5>Datos de cliente</h5>
   </div>
   <div class='card-body'>
-   <label for="nombre"></label>
+   @if (isset($cliente)) 
+   <input type="hidden" value="{{ $cliente->idcliente }}" name="cliente_id">
+   <div class="row">
+       <div class="col-sm-12 col-md-4 col-lg-4">
+        {!! Form::label(null, 'nombre', [null]) !!}
+        {!! Form::text('nombre', $cliente->nombre, ['class'=>'form-control']) !!}
+       </div>
   </div>
+  @endif
  </div>
 </div>
 @stop
